@@ -1,7 +1,9 @@
 import 'package:bot_toast/bot_toast.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:weather/src/core/apis/api_helper.dart';
 import 'package:weather/src/core/configs/color_config.dart';
 import 'package:weather/src/core/configs/string_config.dart';
 import 'package:weather/src/core/utils/preference_helper.dart';
@@ -22,6 +24,7 @@ void main() async {
     ),
   );
 
+  ApiHelper.init(Dio());
   await PreferenceHelper.instance.init();
 
   runApp(const MyApp());

@@ -7,7 +7,11 @@ import 'package:weather/src/core/configs/api_config.dart';
 class ApiHelper {
   ApiHelper._();
 
-  static final _dio = Dio();
+  static Dio? _dio;
+
+  static void init(Dio dio) {
+    _dio = dio;
+  }
 
   static const String _baseDataUrl = 'https://api.openweathermap.org/data/2.5';
   static const String _baseGeoUrl = 'https://api.openweathermap.org/geo/1.0';
@@ -25,14 +29,14 @@ class ApiHelper {
   /// To get weather info from lat lng
   static Future<WeatherModel> getWeatherInfo(
       {required double lat, required double lng}) async {
-    var response = await _dio.get(_getWeatherUrl(lat: lat, lng: lng));
+    var response = await _dio!.get(_getWeatherUrl(lat: lat, lng: lng));
     return WeatherModel.fromJson(response.data);
   }
 
   /// To get location list from city name
   static Future<List<LocationModel>> getLocations(
       {required String query}) async {
-    var response = await _dio.get(_getLocationUrl(query: query));
+    var response = await _dio!.get(_getLocationUrl(query: query));
     return (response.data as List)
         .map((e) => LocationModel.fromJson(e))
         .toList();
