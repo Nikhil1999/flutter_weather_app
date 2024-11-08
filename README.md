@@ -1,8 +1,8 @@
-# Weather App
+# Weather App (Flutter v3.24.4)
 
 A simple app to get weather information for your location.
 
-[Download Apk][tracker].
+[Download Apk][tracker]
 
 [tracker]: https://raw.githubusercontent.com/Nikhil1999/flutter_weather_app/main/raw/build/app-release.apk
 
@@ -15,6 +15,8 @@ A simple app to get weather information for your location.
   - Get cities suggestion for your queried location
 
 ### Ouput
+
+![Example](https://raw.githubusercontent.com/Nikhil1999/flutter_weather_app/main/raw/images/Example.gif 'Example')
 
 ![Home Page](https://raw.githubusercontent.com/Nikhil1999/flutter_weather_app/main/raw/images/Home.jpg 'Home Page')
 
