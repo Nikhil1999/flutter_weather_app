@@ -1,16 +1,25 @@
-# weather
+# Weather App
 
-A new Flutter project.
+A simple app to get weather information for your location
 
-## Getting Started
+### Contents
 
-This project is a starting point for a Flutter application.
+- Home Page
+  - Weather info (Like Temperature, Wind, Humidity & Feeling)
+    - Get weather info of your current location or using the search city
+- Search City Page
+  - Get cities suggestion for your queried location
 
-A few resources to get you started if this is your first Flutter project:
+### Ouput
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Home Page](https://raw.githubusercontent.com/Nikhil1999/flutter_weather_app/main/raw/images/Home.jpg 'Home Page')
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Search Page](https://raw.githubusercontent.com/Nikhil1999/flutter_weather_app/main/raw/images/Search.jpg 'Search Page')
+
+### How To Run
+
+#### Run the below commands
+
+- flutter pub get
+- dart run build_runner build --delete-conflicting-outputs
+- flutter run
